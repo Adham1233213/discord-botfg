@@ -1,10 +1,14 @@
 import os
+from dotenv import load_dotenv
+
+# Load environment variables from .env file
+load_dotenv()
 
 class Config:
     """Configuration settings for the Discord bot"""
     
     # Discord Bot Token - gets from environment or uses provided token as fallback
-    DISCORD_TOKEN = os.getenv("DISCORD_TOKEN", "MTM3NjkwOTE0MzkyNjg5ODcxOA.G9e0xq.pUuWU0ino7mwA-ak1S2fb8pMFT-NiM8tAtY0EE")
+    DISCORD_TOKEN = os.getenv("DISCORD_TOKEN")
     
     # Anti-spam settings
     SPAM_MESSAGE_LIMIT = 30  # Max messages per minute
