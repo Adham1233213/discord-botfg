@@ -1,4 +1,4 @@
-import discord
+vimport discord
 from discord.ext import commands
 import asyncio
 import os
@@ -57,7 +57,7 @@ async def main():
     """Main bot startup function"""
     async with bot:
         await setup_cogs()
-        await bot.start(Config.MTM3NjkwOTE0MzkyNjg5ODcxOA.GMGsuI.bfSRQXM36oz6xWVp27v9yUR9BEJLWtk2Dx8Rmw)
+        await bot.start(Config.env)
 
 if __name__ == "__main__":
     asyncio.run(main())
